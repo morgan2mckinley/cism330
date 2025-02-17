@@ -1,0 +1,96 @@
+/*Morgan McKinley
+02/17/2025
+styles.css*/
+
+/* CSS Reset*/
+*{
+    list-style: none;
+    margin: 2%;
+    text-decoration: none;
+    color:black;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+/* Header Styles */
+header {
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+h3 {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/*Body Styles*/
+p {
+  text-align: left;
+  color: black;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Class Selector Example */
+.link {
+    font-weight: bold;
+	color: blue;
+}
+
+/* ID Selector Example */
+#featured {
+    background: #ff5733;
+    color: red;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Navigation Styles */
+nav {
+    background: black;
+	color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background: gray;
+    border-radius: 5px;
+	color: black;
+}
