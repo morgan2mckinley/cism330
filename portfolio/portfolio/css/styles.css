@@ -26,7 +26,10 @@ figcaption {
 /* Header Styles */
 header {
     color: black;
-    padding: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-left: 20px;
     text-align: center;
 }
 
@@ -36,6 +39,10 @@ h1 {
 	color: black;
 	font-weight: bold;
 	font-size: 50px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
 }
 
 h2 {
@@ -72,6 +79,11 @@ body {
 p {
   text-align: left;
   color: black;
+  padding-top: 0px;
+  padding-right: 70px;
+  padding-bottom: 0px;
+  padding-left: 70px;
+  margin: 100;
 }
 
 img {
@@ -86,6 +98,12 @@ img {
 .link {
     font-weight: bold;
 	color: gray;
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition */
+}
+
+.link:hover {
+  color: #ff5733;
+  text-decoration: underline;
 }
 
 .main-content {
@@ -129,3 +147,157 @@ nav a:hover {
     border-radius: 10px;
 	color: black;
 }
+
+/* = TABLE STYLES = */
+
+/* Desktop & Tablet: Show Table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+/* Mobile: Hide Table & Show List */
+@media (max-width: 768px) {
+    .table-container {
+        display: none;
+    }
+    .mobile-list {
+        display: block;
+    }
+}
+
+/* Tablet & Desktop: Hide List */
+@media (min-width: 769px) {
+    .mobile-list {
+        display: none;
+    }
+}
+
+/* = FORM STYLES = */
+
+.form-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Form Inputs */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Form Design */
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .form-container {
+        max-width: 600px;
+    }
+}
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+#hero {
+	width: 100%;
+	height: 100vh;
+	background:linear-gradient(rgba(0,0,0,0.445), rgba(0,0,0,0.411)), url('../images/heros.png') no-repeat center / cover;
+}
+
+.container{
+    width: 90%;
+	hieght: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container info h1 { 
+	font-size: 3rem; margin-bottom: 1rem;
+}
+
+.container info h2 {
+	font-size: 1.5rem; 
+	margin-bottom: 2rem;
+}
+
+.container info p { 
+	font-size: 1.2rem; 
+	max-width: 60%;
+}
+
+.container info a { 
+	text-decoration: none;
+	display: inline-block;
+	background-color: white;
+	border-radius: 4px;
+	font-size: 1.8rem;
+	padding: 0.5em 2em;
+	margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
