@@ -5,26 +5,82 @@ styles.css*/
 /* CSS Reset*/
 *{
     list-style: none;
-    margin: 2%;
+    margin: 0%;
     text-decoration: none;
-    color:black;
+    color: black;
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
     font-size: 15px;
+	line-height: 1.8;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 20px;
+  color: gray;
+}
+
+/* the hero image */
+.hero-image {
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url("../images/heros.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-text, 
+.hero-text h1, 
+.hero-text h2, 
+.hero-text p {
+    color: white !important;
+	text-align: left;
+}
+
+/* the hero button */
+.hero-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: pink;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: gray;
 }
 
 /* Header Styles */
 header {
     color: black;
-    padding: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-left: 20px;
     text-align: center;
 }
 
 h1 {
-  text-align: center;
-  color: black;
-  font-weight: bold;
-  font-size: 50px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 50px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
 }
 
 h2 {
@@ -41,24 +97,71 @@ h3 {
   font-size: 15px;
 }
 
+footer {
+  background: linear-gradient(to right, #FAEDCB, #C6DEF1);  
+  color: black;
+  text-align: center;
+  margin: 0px;
+  padding: 15px;
+  width: 100%;
+  
+}
+
 /*Body Styles*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /*viewport height*/
+  margin: 0;
+}
+
 p {
   text-align: left;
   color: black;
+  padding-top: 0px;
+  padding-right: 70px;
+  padding-bottom: 0px;
+  padding-left: 70px;
+  margin: ;
 }
 
 img {
     max-width: 100%;
+    height: auto;
     display: block;
+	justify-content: center;
+	align-items: center;
 }
 
-/* Class Selector Example */
+/* Class Selectors */
 .link {
     font-weight: bold;
-	color: blue;
+	color: gray;
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition */
 }
 
-/* ID Selector Example */
+.link:hover {
+  color: #ff5733;
+  text-decoration: underline;
+}
+
+.main-content {
+    flex-grow: 1;
+	margin: 2%;
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* ID Selectors */
 #featured {
     background: #ff5733;
     color: red;
@@ -70,7 +173,7 @@ img {
 nav {
     background: black;
 	color: white;
-    padding: 10px;
+    padding: 20px; /*how thick the nav line is*/
 }
 
 nav ul {
@@ -85,12 +188,171 @@ nav ul li {
 nav a {
     text-decoration: none;
     color: white;
+	font-size: 20px;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 30px 30px;
 }
 
 nav a:hover {
     background: gray;
-    border-radius: 5px;
+    border-radius: 10px;
 	color: black;
 }
+
+/* = TABLE STYLES = */
+
+/* Desktop & Tablet: Show Table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+/* Mobile: Hide Table & Show List */
+@media (max-width: 768px) {
+    .table-container {
+        display: none;
+    }
+    .mobile-list {
+        display: block;
+    }
+}
+
+/* Tablet & Desktop: Hide List */
+@media (min-width: 769px) {
+    .mobile-list {
+        display: none;
+    }
+}
+
+/* = FORM STYLES = */
+
+.form-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Form Inputs */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Form Design */
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .form-container {
+        max-width: 600px;
+    }
+}
+body, html {
+    height: 100%;
+}
+
+/* the gallery images */
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
+/* gallery styles */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.desc {
+    font-size: 20px;
+	font-weight: bold;
+    color: #666;
+    margin-top: 0px;
+}
+
+
+/* */
+
