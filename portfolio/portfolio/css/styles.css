@@ -7,7 +7,7 @@ styles.css*/
     list-style: none;
     margin: 2%;
     text-decoration: none;
-    color:black;
+    color: black;
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
     font-size: 15px;
@@ -259,6 +259,7 @@ body, html {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 }
 
 .container info h1 { 
@@ -272,7 +273,8 @@ body, html {
 
 .container info p { 
 	font-size: 1.2rem; 
-	max-width: 60%;
+	max-width: 70%;
+	margin: 0 auto;
 }
 
 .container info a { 
@@ -283,17 +285,71 @@ body, html {
 	font-size: 1.8rem;
 	padding: 0.5em 2em;
 	margin-top: 2rem;
+	color: #ee6c09;
+}
+
+@media only screen and (max-width: •768px){
+	html {
+		font-size:10px;
+	}
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
 }
 
 
+/* Gallery Styles */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
 
+.gallery-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
 
+.gallery-item:hover {
+    transform: scale(1.05);
+}
 
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
-
-
-
-
+.desc {
+    font-size: 20px;
+	font-weight: bold;
+    color: #666;
+    margin-top: 0px;
+}
 
 
 
