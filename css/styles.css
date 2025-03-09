@@ -6,7 +6,6 @@ styles.css*/
 *{
     list-style: none;
     margin: 0%;
-    text-decoration: none;
     color: black;
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
@@ -24,9 +23,10 @@ figcaption {
   color: gray;
 }
 
-/* the hero image */
-.hero-image {
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url("../images/heros.png");
+/* the hero image home*/
+.hero-image-home{
+	min-height: 400px;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url("../images/1.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -41,24 +41,77 @@ figcaption {
 .hero-text h2, 
 .hero-text p {
     color: white !important;
-	text-align: left;
+	text-align: center;
 }
 
 /* the hero button */
 .hero-btn {
-    display: inline-block;
+ 	align-items: center;
+	display: inline-block;
     padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
-    color: white;
-    background-color: pink;
+    color: black;
+    background-color: #FAEDCB;
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s ease;
 }
 
 .hero-btn:hover {
-    background-color: gray;
+    background-color: #C6DEF1;
+}
+
+/* the hero image about*/
+.hero-image-about{
+	min-height: 400px;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url("../images/heros.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* the hero image gallery*/
+.hero-image-gallery{
+	min-height: 400px;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url("../images/3.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* the hero image questions*/
+.hero-image-questions{
+	min-height: 400px;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url("../images/4.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* the hero image contact*/
+.hero-image-contact{
+	min-height: 400px;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url("../images/2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Header Styles */
@@ -87,14 +140,14 @@ h2 {
   text-align: center;
   color: black;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 h3 {
   text-align: center;
   color: black;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 25px;
 }
 
 footer {
@@ -119,15 +172,15 @@ p {
   text-align: left;
   color: black;
   padding-top: 0px;
-  padding-right: 70px;
+  padding-right: 100px;
   padding-bottom: 0px;
-  padding-left: 70px;
-  margin: ;
+  padding-left: 100px;
+  margin: 0;
 }
 
 img {
     max-width: 100%;
-    height: auto;
+    height: 500px;
     display: block;
 	justify-content: center;
 	align-items: center;
@@ -159,6 +212,20 @@ img {
 
 .footer {
     margin-top: auto; /* Pushes footer to the bottom */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Aligns vertically */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 20px;
+    height: auto;
 }
 
 /* ID Selectors */
@@ -167,6 +234,10 @@ img {
     color: red;
     padding: 15px;
     text-align: center;
+}
+
+strong {
+	font-weight: bold;
 }
 
 /* Navigation Styles */
@@ -208,9 +279,10 @@ nav a:hover {
 }
 
 table {
-    width: 100%;
+    width: 60%;
     border-collapse: collapse;
     margin-top: 20px;
+	margin: 0 auto;
 }
 
 th, td {
@@ -240,6 +312,7 @@ th {
         display: none;
     }
 }
+
 
 /* = FORM STYLES = */
 
@@ -321,8 +394,8 @@ div.desc {
 /* gallery styles */
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 60px;
     padding: 20px;
     max-width: 1200px;
     margin: auto;
@@ -354,5 +427,85 @@ div.desc {
 }
 
 
-/* */
+/*coloms for paragraphs*/
+.grid-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two equal columns */
+    gap: 20px;
+}
+
+.centered-content {
+    max-width: 800px; /* adjust width as needed */
+    margin: 0 auto; /* centers the content */
+    padding: 20px; /* adds padding inside */
+}
+
+
+/* About Section */
+.about {
+    background: white;
+    padding: 60px 60px;
+	align-items: center;
+}
+
+.about .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Services Section */
+.services {
+    background: #fff;
+    padding: 60px 20px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.service-item img {
+	width: 300px;
+	height: auto;
+    border-radius: 5px;
+}
+
+.home-sections {
+    display: flex;
+    justify-content: space-between; /* Adds spacing between columns */
+    align-items: center; /* Aligns items vertically */
+    gap: 20px; /* Space between sections */
+    padding: 40px;
+}
+
+.portfolio-preview, .contact {
+    flex: 1; /* Makes each section take equal space */
+    padding: 20px;
+    background: #fff; /* Optional: Adds contrast */
+    text-align: center; /* Centers content */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 
